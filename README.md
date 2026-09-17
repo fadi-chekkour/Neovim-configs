@@ -23,3 +23,11 @@ If you clone or fork this configuration, you can easily tweak it to fit your wor
 
 1. **Theme Flavor:** Change `"macchiato"` under the Catppuccin setup to `"latte"`, `"frappe"`, or `"mocha"`.
 2. **Languages & LSPs:** Add new language parsers to `ensure_installed` under Treesitter and enable their respective LSPs under `nvim-lspconfig`.
+---
+
+## 🚀 Getting Started
+
+After cloning or forking this repository into your local configuration directory (`~/.config/nvim`), fire up Neovim and run the following commands to complete your environment setup:
+
+1. **`:Lazy sync`** — Automatically installs, updates, and syncs all required plugins (like CodeCompanion and Catppuccin).
+2. **`:Mason`** — Opens the Mason UI manager so you can install and verify your language servers (`clangd`, `basedpyright`, etc.).
