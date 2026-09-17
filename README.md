@@ -6,6 +6,16 @@ A streamlined, modern Neovim IDE configuration tailored for development, featuri
 
 ---
 
+## 🚀 Installation & Getting Started
+
+To install and use this configuration on your local machine, follow these steps:
+
+1. **Clone the repository** into your Neovim configuration directory:
+   ```bash
+   git clone [https://github.com/fadi-chekkour/Neovim-configs.git](https://github.com/fadi-chekkour/Neovim-configs.git) ~/.config/nvim
+
+---
+
 ## 🛠️ Tech Stack & Plugins
 
 * **Package Manager:** [lazy.nvim](https://github.com/folke/lazy.nvim)
