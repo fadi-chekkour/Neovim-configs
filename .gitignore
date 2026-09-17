@@ -1,0 +1,9 @@
+# Lazy.nvim plugin manager installation directory (plugins are downloaded locally, not tracked)
+/lazy/
+
+# Neovim local state, cache, and swap files
+/plugin/
+.netrwhist
+*~
+*.swp
+*.swo
