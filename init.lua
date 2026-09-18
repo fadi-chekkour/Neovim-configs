@@ -98,3 +98,29 @@ require("lazy").setup({
     end,
   },
 })
+--------------------------------------------------
+-- Custom Compile Command for C, C++, Python, and Bash
+--------------------------------------------------
+vim.api.nvim_create_user_command("Compile", function()
+    vim.cmd("w")
+    
+    local file = vim.fn.expand("%:p")
+    local ext = vim.fn.expand("%:e")
+    local filename = vim.fn.expand("%:r")
+    local cmd = ""
+
+    if ext == "c" then
+        cmd = string.format("gcc %s -o %s && ./%s", file, filename, filename)
+    elseif ext == "cpp" then
+        cmd = string.format("g++ %s -o %s && ./%s", file, filename, filename)
+    elseif ext == "py" then
+        cmd = string.format("python3 %s", file)
+    elseif ext == "sh" then
+        cmd = string.format("bash %s", file)
+    else
+        print("No compilation rule for ." .. ext .. " files!")
+        return
+    end
+
+    vim.cmd("split | term " .. cmd)
+end, {})
