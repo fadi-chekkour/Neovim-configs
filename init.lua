@@ -100,7 +100,6 @@ require("lazy").setup({
                     ["deepseek-r1:8b "] = { opts = { model = "deepseek-r1:8b " } },
                     ["phi4-mini"] = { opts = { model = "phi4-mini" } },
                     ["llama3.2"] = { opts = { model = "llama3.2" } },
-                    ["deepseek-r1:8b "] = { opts = { model = "deepseek-r1:8b " } },
                     ["qwen3.5:4b"] = { opts = { model = "qwen3.5:4b" } },
                     -- Add any other models you have pulled via `ollama pull` here
                   },
