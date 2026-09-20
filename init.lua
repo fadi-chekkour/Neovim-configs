@@ -76,7 +76,7 @@ require("lazy").setup({
     end,
   },
 
-  -- 5. Local AI Integration (CodeCompanion via Ollama)
+ -- 5. Local AI Integration (CodeCompanion via Ollama)
   {
     "olimorris/codecompanion.nvim",
     dependencies = {
@@ -91,7 +91,22 @@ require("lazy").setup({
         },
         adapters = {
           ollama = function()
-            return require("codecompanion.adapters").extend("ollama", {})
+            return require("codecompanion.adapters").extend("ollama", {
+              schema = {
+                model = {
+                  -- Provide a list of your installed models to pick from interactively
+                  default = "llama3",
+                  choices = {
+                    ["deepseek-r1:8b "] = { opts = { model = "deepseek-r1:8b " } },
+                    ["phi4-mini"] = { opts = { model = "phi4-mini" } },
+                    ["llama3.2"] = { opts = { model = "llama3.2" } },
+                    ["deepseek-r1:8b "] = { opts = { model = "deepseek-r1:8b " } },
+                    ["qwen3.5:4b"] = { opts = { model = "qwen3.5:4b" } },
+                    -- Add any other models you have pulled via `ollama pull` here
+                  },
+                },
+              },
+            })
           end,
         },
       })
