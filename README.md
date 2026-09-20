@@ -32,7 +32,6 @@ If you clone or fork this configuration, you can easily tweak it to fit your wor
 
 1. **Theme Flavor:** Change `"macchiato"` under the Catppuccin setup to `"latte"`, `"frappe"`, or `"mocha"`.
 2. **Languages & LSPs:** Add new language parsers to `ensure_installed` under Treesitter and enable their respective LSPs under `nvim-lspconfig`.
----
 3. **AI models:**  Change the model names inside the choices table to match the specific local models you have installed on your machine via Ollama (run ollama list in your terminal to check your installed models).
 ## 🚀 Getting Started
 
